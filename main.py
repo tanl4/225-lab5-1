@@ -55,15 +55,15 @@ def index():
         <!DOCTYPE html>
         <html>
         <head>
-            <title>Add your Social Security Number...</title>
+            <title>Add your phone number for Lylian to look at...</title>
         </head>
         <body>
             <h2>Add it now</h2>
             <form method="POST" action="/">
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name" required><br>
-                <label for="phone">SSN:</label><br>
-                <input type="text" id="ssn" name="ssn" required><br><br>
+                <label for="phone">phone:</label><br>
+                <input type="text" id="phone" name="phone" required><br><br>
                 <input type="submit" value="Submit">
             </form>
             <p>{{ message }}</p>
@@ -71,7 +71,7 @@ def index():
                 <table border="1">
                     <tr>
                         <th>Name</th>
-                        <th>ssn</th>
+                        <th>phone</th>
                         <th>Delete</th>
                     </tr>
                     {% for contact in contacts %}
@@ -89,7 +89,7 @@ def index():
                     {% endfor %}
                 </table>
             {% else %}
-                <p>No ssn found.</p>
+                <p>No phone number found.</p>
             {% endif %}
         </body>
         </html>
